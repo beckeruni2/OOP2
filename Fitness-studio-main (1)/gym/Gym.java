@@ -1,10 +1,12 @@
-import gym.Person;
+package gym;
 import gym.management.Secretary;
 
 public class Gym {
     private static Gym instance = null;
     private String _name;
-    private Secretary _secretary;
+    public static Secretary _secretary;
+    private int _money=0;
+    public static int balance = 0;
 
 
     private Gym(){}; // private constructor
@@ -30,5 +32,15 @@ public class Gym {
 
     public Secretary getSecretary() {
         return _secretary;
+    }
+
+    public int getMoney()
+    {
+        return _money;
+    }
+
+    public void setMoney(int updatedMoney)
+    {
+        _money = updatedMoney;
     }
 }
